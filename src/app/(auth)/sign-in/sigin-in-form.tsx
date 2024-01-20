@@ -2,6 +2,7 @@
 
 import { useCallback } from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { z } from 'zod'
 
 import { Button } from '@/components/ui/button'
@@ -22,7 +23,18 @@ export function SignInForm() {
   } = useForm<SignInFormData>()
 
   const handleSignIn = useCallback((data: SignInFormData) => {
-    console.log(data)
+    try {
+      console.log(data)
+
+      toast.success('We just sent you an email with a magic link.', {
+        action: {
+          label: 'Resend email',
+          onClick: () => handleSignIn(data),
+        },
+      })
+    } catch {
+      toast.error('Something went wrong. Please try again.')
+    }
   }, [])
 
   return (
