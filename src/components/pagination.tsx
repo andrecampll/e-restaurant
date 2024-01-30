@@ -31,20 +31,20 @@ export function Pagination({
           Page {pageIndex + 1} of {pages}
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" className="h-8 w-8 p-8">
+          <Button variant="outline" size="icon">
             <ChevronsLeft className="h-4 w-4" />
             <span className="sr-only">First Page</span>
           </Button>
-          <Button variant="outline" className="h-8 w-8 p-8">
+          <Button variant="outline" size="icon">
             <ChevronLeft className="h-4 w-4" />
             <span className="sr-only">Previous Page</span>
           </Button>
-          <Button variant="outline" className="h-8 w-8 p-8">
+          <Button variant="outline" size="icon">
             <ChevronRight className="h-4 w-4" />
             <span className="sr-only">Next Page</span>
           </Button>
 
-          <Button variant="outline" className="h-8 w-8 p-8">
+          <Button variant="outline" size="icon">
             <ChevronsRight className="h-4 w-4" />
             <span className="sr-only">Last Page</span>
           </Button>
