@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
+import { RevenueChart } from './revenue-chart'
+
 export const metadata: Metadata = {
   title: 'Home',
 }
@@ -33,6 +35,10 @@ export default function Home() {
             </p>
           </CardContent>
         </Card>
+      </div>
+
+      <div className="grid grid-cols-9 gap-4">
+        <RevenueChart />
       </div>
     </div>
   )
