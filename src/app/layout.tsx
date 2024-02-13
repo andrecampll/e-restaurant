@@ -6,6 +6,8 @@ import { Toaster } from 'sonner'
 
 import { ThemeProvider } from '@/components/theme/theme-provider'
 
+import Providers from './providers'
+
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
@@ -34,7 +36,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Toaster richColors />
-          {children}
+          <Providers>{children}</Providers>
         </ThemeProvider>
       </body>
     </html>
